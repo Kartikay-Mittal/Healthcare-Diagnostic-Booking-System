@@ -4,24 +4,24 @@ A backend REST API for a healthcare diagnostic booking system. The application p
 
 ## Features
 
-* User registration and authentication
-* JWT-based authentication
-* Access and refresh tokens
-* User profile endpoint
-* Diagnostic centre management
-* Diagnostic test management
-* Centre-specific test pricing
-* Appointment booking
-* Booking cancellation
-* Simulated payment processing
-* Payment success/failure handling
-* Idempotent payment webhooks
-* User-level authorization
-* Admin-only management operations
-* Request validation and error handling
-* PostgreSQL database integration
-* Swagger/OpenAPI documentation
-* Automated API and business-logic tests
+- User registration and authentication
+- JWT-based authentication
+- Access and refresh tokens
+- User profile endpoint
+- Diagnostic centre management
+- Diagnostic test management
+- Centre-specific test pricing
+- Appointment booking
+- Booking cancellation
+- Simulated payment processing
+- Payment success/failure handling
+- Idempotent payment webhooks
+- User-level authorization
+- Admin-only management operations
+- Request validation and error handling
+- PostgreSQL database integration
+- Swagger/OpenAPI documentation
+- Automated API and business-logic tests
 
 ---
 
@@ -252,10 +252,10 @@ Example request:
 
 ```json
 {
-    "email": "user@example.com",
-    "username": "testuser",
-    "password": "StrongPassword123",
-    "password2": "StrongPassword123"
+  "email": "user@example.com",
+  "username": "testuser",
+  "password": "StrongPassword123",
+  "password2": "StrongPassword123"
 }
 ```
 
@@ -271,8 +271,8 @@ Example:
 
 ```json
 {
-    "email": "user@example.com",
-    "password": "StrongPassword123"
+  "email": "user@example.com",
+  "password": "StrongPassword123"
 }
 ```
 
@@ -296,7 +296,7 @@ Example:
 
 ```json
 {
-    "refresh": "<refresh_token>"
+  "refresh": "<refresh_token>"
 }
 ```
 
@@ -338,11 +338,11 @@ Example:
 
 ```json
 {
-    "name": "Example Diagnostics",
-    "address": "Example Address",
-    "city": "Noida",
-    "state": "Uttar Pradesh",
-    "phone": "+91 9876543210"
+  "name": "Example Diagnostics",
+  "address": "Example Address",
+  "city": "Noida",
+  "state": "Uttar Pradesh",
+  "phone": "+91 9876543210"
 }
 ```
 
@@ -406,10 +406,10 @@ Example:
 
 ```json
 {
-    "centre": 1,
-    "name": "Complete Blood Count",
-    "description": "Basic blood examination",
-    "price": "499.00"
+  "centre": 1,
+  "name": "Complete Blood Count",
+  "description": "Basic blood examination",
+  "price": "499.00"
 }
 ```
 
@@ -463,9 +463,9 @@ Example:
 
 ```json
 {
-    "centre": 1,
-    "test": 1,
-    "appointment_datetime": "2026-10-15T10:30:00Z"
+  "centre": 1,
+  "test": 1,
+  "appointment_datetime": "2026-10-15T10:30:00Z"
 }
 ```
 
@@ -525,7 +525,7 @@ Example:
 
 ```json
 {
-    "booking": 1
+  "booking": 1
 }
 ```
 
@@ -585,9 +585,9 @@ Example:
 
 ```json
 {
-    "event_id": "event-12345",
-    "transaction_id": "SIM-ABC123456789",
-    "status": "SUCCESS"
+  "event_id": "event-12345",
+  "transaction_id": "SIM-ABC123456789",
+  "status": "SUCCESS"
 }
 ```
 
@@ -707,26 +707,26 @@ Users cannot modify another user's bookings or payments.
 
 The API handles several invalid scenarios, including:
 
-* Missing required fields
-* Invalid user credentials
-* Duplicate email registration
-* Password mismatch
-* Short passwords
-* Invalid centre IDs
-* Invalid test IDs
-* Inactive diagnostic centres
-* Inactive diagnostic tests
-* Test belonging to a different centre
-* Missing appointment date/time
-* Unauthorized booking access
-* Unauthorized payment access
-* Payment for cancelled booking
-* Attempting to cancel non-pending bookings
-* Invalid payment webhook status
-* Unknown transaction IDs
-* Duplicate webhook events
-* Reusing an existing webhook event ID
-* Attempting to modify finalized payments
+- Missing required fields
+- Invalid user credentials
+- Duplicate email registration
+- Password mismatch
+- Short passwords
+- Invalid centre IDs
+- Invalid test IDs
+- Inactive diagnostic centres
+- Inactive diagnostic tests
+- Test belonging to a different centre
+- Missing appointment date/time
+- Unauthorized booking access
+- Unauthorized payment access
+- Payment for cancelled booking
+- Attempting to cancel non-pending bookings
+- Invalid payment webhook status
+- Unknown transaction IDs
+- Duplicate webhook events
+- Reusing an existing webhook event ID
+- Attempting to modify finalized payments
 
 ---
 
@@ -754,45 +754,45 @@ Stores authentication and user information.
 
 Stores diagnostic centre information such as:
 
-* Name
-* Address
-* City
-* State
-* Phone
-* Active status
+- Name
+- Address
+- City
+- State
+- Phone
+- Active status
 
 ### DiagnosticTest
 
 Stores:
 
-* Test name
-* Description
-* Price
-* Associated diagnostic centre
-* Active status
+- Test name
+- Description
+- Price
+- Associated diagnostic centre
+- Active status
 
 ### Booking
 
 Stores:
 
-* User
-* Diagnostic centre
-* Diagnostic test
-* Appointment date/time
-* Amount
-* Booking status
-* Creation/update timestamps
+- User
+- Diagnostic centre
+- Diagnostic test
+- Appointment date/time
+- Amount
+- Booking status
+- Creation/update timestamps
 
 ### Payment
 
 Stores:
 
-* Booking
-* Amount
-* Payment status
-* Transaction ID
-* Webhook event ID
-* Creation/update timestamps
+- Booking
+- Amount
+- Payment status
+- Transaction ID
+- Webhook event ID
+- Creation/update timestamps
 
 ---
 
@@ -858,30 +858,30 @@ Current test status:
 
 Example test areas include:
 
-* User signup
-* User login
-* Invalid credentials
-* JWT authentication
-* Token refresh
-* Duplicate registration
-* Centre creation
-* Test creation
-* Centre/test authorization
-* Centre/test retrieval
-* Booking creation
-* Booking ownership
-* Booking validation
-* Booking cancellation
-* Payment creation
-* Payment amount validation
-* Payment success
-* Payment failure
-* Payment authorization
-* Webhook success
-* Webhook failure
-* Duplicate webhook handling
-* Webhook event ID reuse
-* Finalized payment protection
+- User signup
+- User login
+- Invalid credentials
+- JWT authentication
+- Token refresh
+- Duplicate registration
+- Centre creation
+- Test creation
+- Centre/test authorization
+- Centre/test retrieval
+- Booking creation
+- Booking ownership
+- Booking validation
+- Booking cancellation
+- Payment creation
+- Payment amount validation
+- Payment success
+- Payment failure
+- Payment authorization
+- Webhook success
+- Webhook failure
+- Duplicate webhook handling
+- Webhook event ID reuse
+- Finalized payment protection
 
 ---
 
@@ -889,15 +889,15 @@ Example test areas include:
 
 The project includes:
 
-* JWT authentication
-* Password hashing through Django authentication
-* Permission-based authorization
-* User-level object access restrictions
-* Admin-only management operations
-* Environment-based database credentials
-* Input validation
-* Payment ownership validation
-* Webhook idempotency
+- JWT authentication
+- Password hashing through Django authentication
+- Permission-based authorization
+- User-level object access restrictions
+- Admin-only management operations
+- Environment-based database credentials
+- Input validation
+- Payment ownership validation
+- Webhook idempotency
 
 Sensitive credentials should never be committed to source control.
 
@@ -924,21 +924,21 @@ The following assumptions were made for the assignment:
 
 Possible production-level improvements include:
 
-* Redis caching
-* Celery background tasks
-* Real payment gateway integration
-* Webhook signature verification
-* Rate limiting
-* API pagination
-* Advanced filtering and searching
-* Structured application logging
-* Docker and Docker Compose
-* CI/CD pipeline
-* Production deployment
-* Database indexing optimization
-* Automated API monitoring
-* Role-based access control
-* Email/SMS appointment notifications
+- Redis caching
+- Celery background tasks
+- Real payment gateway integration
+- Webhook signature verification
+- Rate limiting
+- API pagination
+- Advanced filtering and searching
+- Structured application logging
+- Docker and Docker Compose
+- CI/CD pipeline
+- Production deployment
+- Database indexing optimization
+- Automated API monitoring
+- Role-based access control
+- Email/SMS appointment notifications
 
 ---
 
@@ -998,15 +998,14 @@ Generate OpenAPI schema:
 python manage.py spectacular --file schema.yml
 ```
 
-
 ---
 
 # Author
 
 # Name: Kartikay Mittal
 
-GitHub: **<!-- UPDATE: YOUR GITHUB PROFILE URL -->**
+GitHub: https://github.com/Kartikay-Mittal/
 
-Email: **<!-- UPDATE: YOUR EMAIL, OPTIONAL -->**
+Email: kartikaymittal6993@gmail.com
 
-Repository: **<!-- UPDATE: YOUR GITHUB REPOSITORY URL -->**
+Repository: https://github.com/Kartikay-Mittal/Healthcare-Diagnostic-Booking-System
